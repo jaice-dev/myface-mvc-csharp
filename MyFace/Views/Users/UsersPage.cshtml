@@ -3,3 +3,13 @@
 @{
     Layout = "_Layout";
 }
+
+<main>
+    <h1>List of Users</h1>
+    <ul class="list-of-users">
+        @foreach (var user in Model.Users)
+        {
+            <li class="user"><a href="/Users/@user.Id">@user.DisplayName</a></li>
+        }
+    </ul>
+</main>
