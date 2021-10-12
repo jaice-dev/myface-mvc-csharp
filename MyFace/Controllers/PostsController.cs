@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using MyFace.Models.Request;
 using MyFace.Models.View;
 using MyFace.Repositories;
@@ -34,6 +35,7 @@ namespace MyFace.Controllers
         [HttpPost("create")]
         public IActionResult CreatePost(CreatePostRequestModel newPost)
         {
+            Console.WriteLine(newPost);
             if (!ModelState.IsValid)
             {
                 return View("CreatePostPage", newPost);
