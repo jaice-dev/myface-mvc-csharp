@@ -1,14 +1,30 @@
-.post-message {
-    font-size: 50px;
+post-message {
+    font-size: 100px;
 }
 
 .list-of-posts {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .pageContent {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style-type: none;
+    
+    
 }
