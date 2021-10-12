@@ -9,11 +9,12 @@
 
     public void displayPosts()
     {
-        @foreach (var post in Model.Posts)
+        <ul>
+        @foreach (var post in Model.Posts.OrderBy(x => x.PostedAt))
         {
             <li class="list-of-posts">
                 <div class="post-user">
-                    <p class="displayname">Display name: @post.PostedBy.DisplayName, Username: @post.PostedBy.Username</p>
+                    <p class="display-name">Display name: @post.PostedBy.DisplayName, Username: @post.PostedBy.Username</p>
                     <img class="profile-picture" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
                 </div>
                
@@ -29,6 +30,7 @@
                 <hr>
             </li>
         }
+        </ul>
     }
 
     public int getLikes(IEnumerable<UserViewModel> likesList)
