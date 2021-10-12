@@ -4,3 +4,44 @@
     Layout = "_Layout";
 }
 
+<!-- show dislikes/likes? -->
+
+<main>
+    <h1>User Page for @Model.DisplayName</h1>
+    <div class="userInfo">
+        <img class="cover-picture" alt="Cover Image (broken)" src="@Model.CoverImageUrl"></img>
+        <p class="user-username">@Model.Username</p>
+        <p class="user-Email">@Model.Email</p>
+        <img class="profile-picture" alt="Profile picture (broken)" src="@Model.ProfileImageUrl"></img>
+    </div>
+    <ul class="pageContent">
+        @foreach (var post in Model.Posts)
+        {
+            <li class="list-of-posts">
+                <div class="post-user">
+                    <p class="display-name">Display name: @post.PostedBy.DisplayName, Username: @post.PostedBy.Username</p>
+                    <img class="profile-picture" height="100" width="100" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
+                </div>
+                       
+                <div class="post-message">
+                    <p class="post-message">Message: @post.Message</p>
+                    <img class="post-image" height="200" width="200" src="@post.ImageUrl" alt="broken post pic :(">
+                </div>
+                        
+                <div class="post-data">
+                    <p class="post-time">Posted at: @post.PostedAt</p>
+                    @* <p class="post-likes">Likes: @getLikes(post.LikedBy)</p> *@
+                    <p class="post-dislikes">Disikes: placeholder/p>
+                </div>
+                        
+                <hr>
+            </li>
+        }
+    </ul>
+</main>
+
+
+@* public int Id { get; set; } *@
+@*          *@
+@* public ICollection<Post> Posts { get; set; } = new List<Post>(); *@
+@* public ICollection<Interaction> Interactions { get; set; } = new List<Interaction>(); *@
