@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+/*TODO add extra fonts */
+
 post-message {
     font-size: 100px;
 }
@@ -25,6 +33,13 @@ post-message {
     flex-direction: row;
     gap: 10px;
     list-style-type: none;
+}
+
+.navbar-brand{
+    text-decoration: none;
     
-    
+}
+
+.nav-link{
+    text-decoration: none;
 }
