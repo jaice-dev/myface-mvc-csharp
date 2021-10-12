@@ -1,5 +1,62 @@
-﻿@model MyFace.Models.View.PostsViewModel
+﻿@using MyFace.Models.View
+@model MyFace.Models.View.PostsViewModel
 
 @{
     Layout = "_Layout";
 }
+
+@functions {
+
+    public void displayPosts()
+    {
+        @foreach (var post in Model.Posts)
+        {
+            <li class="list-of-posts">
+                <div class="post-user">
+                    <p class="displayname">Display name: @post.PostedBy.DisplayName, Username: @post.PostedBy.Username</p>
+                    <img class="profile-picture" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
+                </div>
+               
+                <div class="post-message">
+                    <p class="post-message">Message: @post.Message</p>
+                    <img class="post-image" src="@post.ImageUrl" alt="broken post pic :(">
+                </div>
+                <div class="post-data">
+                    <p class="post-time">Posted at: @post.PostedAt</p>
+                    @* <p class="post-likes">Likes: @getLikes(post.LikedBy)</p> *@
+                    <p class="post-dislikes">Disikes: @post.LikedBy/p>
+                </div>
+                <hr>
+            </li>
+        }
+    }
+
+    public int getLikes(IEnumerable<UserViewModel> likesList)
+    {
+        var counter = 0;
+        if (likesList != null)
+        {
+            foreach (var user in likesList)
+            {
+                if (user != null)
+                {
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+}
+
+@{
+    displayPosts();
+}
+<main>
+    <h1>My Face Posts</h1>
+    <li></li>
+</main>
+
+<style>
+    
+</style>
+
