@@ -6,6 +6,7 @@
 }
 
 /*TODO add extra fonts */
+/*TODO Add hover to full navbar */
 
 post-message {
     font-size: 100px;
@@ -45,7 +46,7 @@ post-message {
     text-decoration: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     .topnav {
         overflow: hidden;
         background-color: #2a7f6b;
@@ -105,7 +106,7 @@ post-message {
 
 }
 
-@media (min-width: 901px){
+@media (min-width: 700px){
     .topnav {
         overflow: hidden;
         display: flex;
