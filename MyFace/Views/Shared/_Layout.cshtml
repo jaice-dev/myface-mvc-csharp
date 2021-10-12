@@ -13,39 +13,16 @@
       <a href="#home" class="logo">MyFace</a>
       <!-- Navigation links (hidden by default) -->
       <div id="myLinks">
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+          <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="CreatePostPage">Create Post</a>
+          <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="PostsPage">Posts</a>
+          <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="UsersPage">Users</a>
+          <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
       </div>
       <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"> *@
-    @*     <div class="navbar-container"> *@
-    @*         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MyFace</a> *@
-    @*         <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"> *@
-    @*             <ul class="navbar-nav flex-grow-1"> *@
-    @*                 <li class="nav-item"> *@
-    @*                     <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="PostsPage">Posts</a> *@
-    @*                 </li> *@
-    @*                 <li class="nav-item"> *@
-    @*                     <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="UsersPage">Users</a> *@
-    @*                 </li> *@
-    @*                 <li class="nav-item"> *@
-    @*                     <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="CreateUserPage">Create User</a> *@
-    @*                 </li> *@
-    @*                 <li class="nav-item"> *@
-    @*                     <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> *@
-    @*                 </li> *@
-    @*                 <li class="nav-item"> *@
-    @*                     <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="CreatePostPage">Create Post</a> *@
-    @*                 </li> *@
-    @*             </ul> *@
-    @*         </div> *@
-    @*     </div> *@
-    @* </nav> *@
 </header>
     <div class="container">
         <main role="main" class="pb-3">
