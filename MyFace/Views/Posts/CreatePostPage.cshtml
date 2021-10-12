@@ -1,13 +1,25 @@
-﻿@model MyFace.Models.Request.CreatePostRequestModel
+﻿@using MyFace.Models.Request
+@using MyFace.Repositories
+@using MyFace.Controllers
+@model MyFace.Models.Request.CreatePostRequestModel
 
 @{
     Layout = "_Layout";
 }
 
-<form>
-    <p>Input Message</p>
-    <input type="text" name="message-input"></input>
-    <p>Input Image</p>
-    <input type="text" name="image-input"></input>
+<form method="POST">
+    <label for="message-input">Input Message</label><br>
+    <input id="message-input" type="text" name="message-input"></input><br>
+    <label for="message-image">Input Image</label><br>
+    <input id="message-image" type="text" name="image-input"></input><br>
     <input type="submit"></input>
-</form>#
+</form>
+
+@{
+    CreatePostRequestModel thing = new CreatePostRequestModel();
+    // ImageUrl = postModel.ImageUrl,
+    // Message = postModel.Message,
+    // PostedAt = DateTime.Now,
+    // UserId = postModel.UserId,
+    // How do we httppost?
+}
