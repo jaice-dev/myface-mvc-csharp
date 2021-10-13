@@ -8,16 +8,23 @@
 }
 
 <!-- TODO add styling to Create post page -->
+<div class="post-form-container">
+    <form method = "post" action="/posts/create">
+        <fieldset>
+            <legend>Create a New Post</legend>
+            <label for="userId">User Id</label><br/>
+            <input type="number" id="userId" name="userId" alt="user id input box"/><br/>
+        
+            <label for="Message">Input Message</label><br>
+            <textarea id="Message" type="text" name="Message"></textarea><br>
+        
+            <label for="ImageUrl">Input Image</label><br>
+            <input id="ImageUrl-image" type="text" name="ImageUrl"/><br>
 
-<form method="post" action="/posts/create">
-    <label for="userId">User Id</label><br/>
-    <input type="number" id="userId" name="userId" alt="user id input box"/><br/>
-    <label for="Message">Input Message</label><br>
-    <input id="Message" type="text" name="Message"></input><br>
-    <label for="ImageUrl">Input Image</label><br>
-    <input id="ImageUrl-image" type="text" name="ImageUrl"></input><br>
-    <input type="submit"></input>
-</form>
+            <input type="submit"/>
+        </fieldset>
+    </form>
+</div>
 
 @{
     CreatePostRequestModel thing = new CreatePostRequestModel();
