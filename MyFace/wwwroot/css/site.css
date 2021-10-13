@@ -197,3 +197,18 @@ p {
     max-height: 100%;
     max-width: 100%;
 }
+
+.post-data {
+}
+
+.post-data .post-likes {
+    display: inline;
+    white-space: nowrap;
+    margin-right: 20px;
+
+}
+
+.post-data .post-dislikes {
+    display: inline;
+    white-space: nowrap;
+}
