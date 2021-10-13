@@ -1,5 +1,4 @@
-﻿@using MyFace.Models.View
-@model MyFace.Models.View.PostsViewModel
+﻿@model MyFace.Models.View.PostsViewModel
 <!DOCTYPE html>
 
 @{
@@ -10,53 +9,34 @@
 <!-- TODO Next 10 button? -->
 <!-- TODO Semantic time -->
 
-@functions {
-    public int getLikes(IEnumerable<UserViewModel> likesList)
-    {
-        var counter = 0;
-        if (likesList != null)
-        {
-            foreach (var user in likesList)
-            {
-                if (user != null)
-                {
-                    counter++;
-                }
-            }
-        }
-        return counter;
-    }
-}
-
 <!-- TODO make "list of posts" margin a property of a higher level class (descendants/direct descendants)-->
-
 <main>
     <h1 class="page-title">My Face Posts</h1>
     <article class="posts-article">
         <ul class="pageContent">
-                @foreach (var post in Model.Posts.OrderBy(x => x.PostedAt))
-                {
-                    <li class="list-of-posts">
-                        <div class="post-user">
-                            <div class="post-user-info">
-                                <p class="display-name">@post.PostedBy.DisplayName</p>
-                                <p class="post-time">@post.PostedAt</p>
-                            </div>
-                            <img class="profile-picture" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
+            @foreach (var post in Model.Posts.OrderBy(x => x.PostedAt))
+            {
+                <li class="list-of-posts">
+                    <div class="post-user">
+                        <div class="post-user-info">
+                            <p class="display-name">@post.PostedBy.DisplayName</p>
+                            <p class="post-time">@post.PostedAt</p>
                         </div>
+                        <img class="profile-picture" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
+                    </div>
                        
-                        <div class="post-message">
-                            <p class="post-message">@post.Message</p>
-                            <img class="post-image" src="@post.ImageUrl" alt="broken post pic :(">
-                        </div>
+                    <div class="post-message">
+                        <p class="post-message">@post.Message</p>
+                        <img class="post-image" src="@post.ImageUrl" alt="broken post pic :(">
+                    </div>
                         
-                        <div class="post-data">
-                            <p class="post-likes">&#x1F44D placeholder</p>
-                            <p class="post-dislikes">&#x1F44E placeholder</p>
-                        </div>
-                    </li>
-                }
-                </ul>
+                    <div class="post-data">
+                        <p class="post-likes">&#x1F44D placeholder @post.LikedBy.Count()</p>
+                        <p class="post-dislikes">&#x1F44E placeholder</p>
+                    </div>
+                </li>
+            }
+        </ul>
     </article>
 </main>
 

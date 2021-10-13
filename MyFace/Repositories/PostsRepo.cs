@@ -27,6 +27,7 @@ namespace MyFace.Repositories
             return _context.Posts
                 .Include(p => p.User)
                 .Include(p => p.Interactions)
+                .ThenInclude(i => i.User)
                 .OrderByDescending(p => p.PostedAt)
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize);
