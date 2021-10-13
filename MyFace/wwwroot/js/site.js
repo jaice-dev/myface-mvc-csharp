@@ -27,8 +27,8 @@ function turnOnOrOffBurgerMenu(){
             x.style.display = "none";
         }
     }
-    
 }
+
 var x = document.getElementById("myLinks");
 x.style.display = "none";
 window.onresize = turnOnOrOffBurgerMenu;

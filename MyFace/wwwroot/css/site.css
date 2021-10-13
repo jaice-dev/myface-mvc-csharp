@@ -8,44 +8,6 @@
 /*TODO add extra fonts */
 /*TODO Add hover to full navbar */
 
-post-message {
-    font-size: 100px;
-}
-
-.list-of-posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.pageContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar-nav{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    list-style-type: none;
-}
-
-.navbar-brand{
-    text-decoration: none;
-    
-}
-
-.nav-link{
-    text-decoration: none;
-}
-
 @media (max-width: 700px) {
     .topnav {
         overflow: hidden;
@@ -148,4 +110,81 @@ post-message {
         font-size: 25px;
     }
 
+}
+
+/* Posts layout */
+
+post-message {
+    font-size: 100px;
+}
+
+.list-of-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex: 1;
+    max-width: 700px;
+}
+
+
+.pageContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 1000px;
+    
+}
+
+body {
+    background-color: lightgray;
+}
+
+.page-title {
+    text-align: center;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.post-user {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.post-user .profile-picture {
+    height: 100px;
+    width: 100px;
+    border-style: solid;
+    border-color: #1f6555;
+    border-width: thick;
+}
+
+.post-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.posts-article {
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
 }

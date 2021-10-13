@@ -1,5 +1,6 @@
 ﻿@using MyFace.Models.View
 @model MyFace.Models.View.PostsViewModel
+<!DOCTYPE html>
 
 @{
     Layout = "_Layout";
@@ -7,6 +8,7 @@
 <!-- TODO get likes and dislikes counter working -->
 <!-- TODO display username or Displayname -->
 <!-- TODO Next 10 button? -->
+<!-- TODO Semantic time -->
 
 @functions {
     public int getLikes(IEnumerable<UserViewModel> likesList)
@@ -27,15 +29,18 @@
 }
 
 <main>
-    <h1>My Face Posts</h1>
-    <article>
+    <h1 class="page-title">My Face Posts</h1>
+    <article class="posts-article">
         <ul class="pageContent">
                 @foreach (var post in Model.Posts.OrderBy(x => x.PostedAt))
                 {
                     <li class="list-of-posts">
                         <div class="post-user">
-                            <p class="display-name">Display name: @post.PostedBy.DisplayName, Username: @post.PostedBy.Username</p>
-                            <img class="profile-picture" height="100" width="100" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
+                            <div class="post-user-info">
+                                <p class="display-name">@post.PostedBy.DisplayName</p>
+                                <p class="post-time">@post.PostedAt</p>
+                            </div>
+                            <img class="profile-picture" src="@post.PostedBy.ProfileImageUrl" alt="broken Profile pic :(">
                         </div>
                        
                         <div class="post-message">
@@ -48,8 +53,6 @@
                             @* <p class="post-likes">Likes: @getLikes(post.LikedBy)</p> *@
                             <p class="post-dislikes">Disikes: placeholder/p>
                         </div>
-                        
-                        <hr>
                     </li>
                 }
                 </ul>
