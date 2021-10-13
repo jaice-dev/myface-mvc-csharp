@@ -120,14 +120,15 @@ post-message {
 
 .list-of-posts {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     background-color: white;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
     flex: 1;
-    max-width: 700px;
+    max-width: 800px;
+    align-items: stretch;
 }
 
 
@@ -135,10 +136,10 @@ post-message {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex: 1;
     max-width: 1000px;
-    
+    align-items: stretch;
+
+
 }
 
 body {
@@ -185,6 +186,9 @@ ul {
 
 .posts-article {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: aqua;
+    align-items: center;
 }
+
+/* Posts layout */
