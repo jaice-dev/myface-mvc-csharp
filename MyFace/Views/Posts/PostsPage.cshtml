@@ -28,6 +28,8 @@
     }
 }
 
+<!-- TODO make "list of posts" margin a property of a higher level class (descendants/direct descendants)-->
+
 <main>
     <h1 class="page-title">My Face Posts</h1>
     <article class="posts-article">
@@ -44,14 +46,13 @@
                         </div>
                        
                         <div class="post-message">
-                            <p class="post-message">Message: @post.Message</p>
-                            <img class="post-image" height="200" width="200" src="@post.ImageUrl" alt="broken post pic :(">
+                            <p class="post-message">@post.Message</p>
+                            <img class="post-image" src="@post.ImageUrl" alt="broken post pic :(">
                         </div>
                         
                         <div class="post-data">
-                            <p class="post-time">Posted at: @post.PostedAt</p>
-                            @* <p class="post-likes">Likes: @getLikes(post.LikedBy)</p> *@
-                            <p class="post-dislikes">Disikes: placeholder/p>
+                            <p class="post-likes">&#x1F44D placeholder</p>
+                            <p class="post-dislikes">&#x1F44E placeholder</p>
                         </div>
                     </li>
                 }
