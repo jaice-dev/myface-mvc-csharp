@@ -169,19 +169,16 @@ ul {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: center;
 }
 
 .post-user .profile-picture {
     height: 100px;
     width: 100px;
+    margin: 10px;
     border-style: solid;
     border-color: #1f6555;
     border-width: thick;
-}
-
-.post-user-info {
-    display: flex;
-    flex-direction: column;
 }
 
 .posts-article {
@@ -191,4 +188,15 @@ ul {
     align-items: center;
 }
 
-/* Posts layout */
+div.post-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+p.display-name {
+    font-weight: bold;
+}
+
+p.post-time {
+    color: rgba(0, 0, 0, 0.43);
+}
