@@ -164,7 +164,7 @@ ul {
     
 }
 
-.post-user .profile-picture {
+.profile-picture {
     height: 100px;
     width: 100px;
     border-style: solid;
@@ -213,7 +213,17 @@ p {
 
 }
 
+.user-info {
+    height: 100px;
+    width: 100px;
+}
+
 .post-data .post-dislikes {
     display: inline;
     white-space: nowrap;
+}
+
+/* UserPage Styling */
+.user-info .cover-picture {
+    
 }
