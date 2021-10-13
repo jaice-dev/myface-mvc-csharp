@@ -222,8 +222,61 @@ p {
     display: inline;
     white-space: nowrap;
 }
+/* Create Post Layout */
 
 /* UserPage Styling */
 .user-info .cover-picture {
     
+}
+
+fieldset{
+    margin: auto;
+    padding: 1em 2em;
+    border: solid 1px grey;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend{
+    font-size: 1.25em;
+    padding: 0.25em;
+    color: #1f6555;
+}
+
+label{
+    display: block;
+    margin-top: 1em;
+}
+
+label:first-of-type{
+    margin-top:0;
+}
+input{
+    padding: 0.5em;
+    border: solid 1px #999;
+}
+input[type="text"]{
+    width: 15em;
+}
+
+textarea{
+    min-height: 8em;
+    min-width: 100%;
+    padding: .5em;
+    border:solid 1px #999;
+}
+
+input[type="submit"]{
+    padding: .5em 1em;
+    border-radius: 6px;
+    background-color: #333;
+    color: #fff;
+    font-size: .8em;
+}
+.post-form-container{
+    display: flex;
+    justify-content: center;
+    flex:1;
+    flex-direction: column;
+    max-width: 1000px;
 }
