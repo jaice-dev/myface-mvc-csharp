@@ -1,4 +1,5 @@
-﻿@model MyFace.Models.Request.CreateUserRequestModel
+﻿@using System.Data.SqlClient
+@model MyFace.Models.Request.CreateUserRequestModel
 
 @{
     Layout = "_Layout";
@@ -6,7 +7,6 @@
 
 <form method="post" action="/users/create">
     <fieldset>
-        
         <label for="FirstName">First name: </label><br/>
         <input id="FirstName" type="text" name="FirstName"/><br/>
         <label for="LastName">Last name: </label><br/>
@@ -22,3 +22,20 @@
         <input type="submit"/>
     </fieldset>
 </form>
+
+@GetIdFromUsername()
+
+@{
+    string GetIdFromUsername()
+    {
+        using (SqlConnection conn = new SqlConnection("Data Source=C:/Training/myface-mvc-csharp/MyFace/myface.db"))
+        {
+            conn.Open();
+            var sqlCmd = new SqlCommand("SELECT Id FROM  Users WHERE (Username = Username)", conn);
+            SqlDataReader reader = sqlCmd.ExecuteReader();
+            var x = reader[0].ToString();
+            conn.Close();
+            return x;
+        }
+    }
+}
