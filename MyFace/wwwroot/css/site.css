@@ -114,32 +114,17 @@
 
 /* Posts layout */
 
-post-message {
-    font-size: 100px;
+.post-message {
+
 }
 
 .list-of-posts {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: white;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    flex: 1;
-    max-width: 800px;
-    align-items: stretch;
 }
 
-
 .pageContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 1000px;
-    align-items: stretch;
-
-
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 body {
@@ -168,7 +153,7 @@ ul {
 .post-user {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -182,10 +167,6 @@ ul {
 }
 
 .posts-article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 div.post-user-info {
