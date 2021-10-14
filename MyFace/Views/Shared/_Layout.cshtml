@@ -25,14 +25,29 @@
       </a>
     </div>
 </header>
-<button data-modal-target="#modal">Open Modal</button>
+<button data-modal-target="#modal">Create a new post</button>
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Example Modal</div>
+      <div class="title">New post</div>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-     test
+     <div class="post-form-container">
+         <form method = "post" action="/posts/create">
+             <fieldset>
+                 <label for="userId">User Id</label><br/>
+                 <input type="number" id="userId" name="userId" alt="user id input box"/><br/>
+             
+                 <label for="Message">Input Message</label><br>
+                 <textarea id="Message" type="text" name="Message"></textarea><br>
+             
+                 <label for="ImageUrl">Input Image</label><br>
+                 <input id="ImageUrl-image" type="text" name="ImageUrl"/><br>
+     
+                 <input type="submit"/>
+             </fieldset>
+         </form>
+     </div>
     </div>
   </div>
   <div id="overlay"></div>
