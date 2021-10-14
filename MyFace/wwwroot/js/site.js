@@ -49,9 +49,15 @@ turnOnOrOffBurgerMenu()
 // })
 
 //Delete anything that is clicked on
-window.addEventListener('click', (e) => {
-    var deleteTarget = e.target;
-    console.log(e)
-    
+// window.addEventListener('click', (e) => {
+//     var deleteTarget = e.target;
+//     console.log(e);
+//     deleteTarget.style.display = "none";
+// })
+
+// Stop Create post link from working
+let createPostLink = document.querySelector("#create-post-link");
+createPostLink.addEventListener('click', (e) => {
+    e.preventDefault();
 })
 
