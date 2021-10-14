@@ -15,7 +15,7 @@
       <!-- Navigation links (hidden by default) -->
       <div id="myLinks">          
           <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="PostsPage">Homepage</a>
-          <a class="nav-link text-dark" id="create-post-link" asp-area="" asp-controller="Posts" asp-action="CreatePostPage">Post</a>
+          <a data-modal-target="#modal" class="nav-link text-dark" id="create-post-link" asp-area="" asp-controller="Posts" asp-action="CreatePostPage">Post</a>
           <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="UsersPage">Users</a>
           <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
       </div>
@@ -25,8 +25,7 @@
       </a>
     </div>
 </header>
-<button data-modal-target="#modal">Create a new post</button>
-  <div class="modal" id="modal">
+    <div class="modal" id="modal">
     <div class="modal-header">
       <div class="title">New post</div>
       <button data-close-button class="close-button">&times;</button>
