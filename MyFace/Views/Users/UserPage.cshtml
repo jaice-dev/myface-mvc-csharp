@@ -9,7 +9,7 @@
 <main>
     <h1>User Page for @Model.DisplayName</h1>
     <div class="userInfo">
-        <img class="cover-picture" alt="Cover Image (broken)" src="@Model.CoverImageUrl"></img>
+        <img class="cover-picture" id="delete-this" alt="Cover Image (broken)" src="@Model.CoverImageUrl"></img>
         <p class="user-username">@Model.Username</p>
         <p class="user-Email">@Model.Email</p>
         <img class="profile-picture" alt="Profile picture (broken)" src="@Model.ProfileImageUrl"></img>
@@ -39,9 +39,3 @@
         }
     </ul>
 </main>
-
-
-@* public int Id { get; set; } *@
-@*          *@
-@* public ICollection<Post> Posts { get; set; } = new List<Post>(); *@
-@* public ICollection<Interaction> Interactions { get; set; } = new List<Interaction>(); *@

@@ -34,4 +34,24 @@ x.style.display = "none";
 window.onresize = turnOnOrOffBurgerMenu;
 turnOnOrOffBurgerMenu()
 
+// Delete specific element
+// var toDelete = document.getElementById("delete-this");
+// toDelete?.addEventListener('click', () => {
+//     toDelete.remove()
+// })
+//
+// Delete all elements with a specific class
+// var postImages = document.querySelectorAll(".post-image")
+// postImages.forEach(picture => {
+//     picture.addEventListener('click', () => {
+//         picture.remove()
+//     })
+// })
+
+//Delete anything that is clicked on
+window.addEventListener('click', (e) => {
+    var deleteTarget = e.target;
+    console.log(e)
+    
+})
 
